@@ -5,9 +5,9 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    @schoolclass = SchoolClass.new(:title, :room_number)
-    @schoolclass.save
-    redirect_to schoolclass_path(@schoolclass)
+    @school_class = SchoolClass.new(:title, :room_number)
+    @school_class.save
+    redirect_to school_class_path(@school_class)
   end
 
   def show
