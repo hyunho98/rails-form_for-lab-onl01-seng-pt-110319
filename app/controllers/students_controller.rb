@@ -5,6 +5,8 @@ class StudentsController < ApplicationController
   end
 
   def create
+    student = Student.new
+    student.first_name = params[:student]
   end
 
   def show
@@ -14,5 +16,11 @@ class StudentsController < ApplicationController
   end
 
   def update
+  end
+
+  private
+
+  def student_params(*args)
+    params.require(:student).permit(*args)
   end
 end
