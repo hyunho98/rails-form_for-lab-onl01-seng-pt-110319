@@ -1,6 +1,7 @@
 class SchoolClass < ActiveRecord::Base
 
   def new
+    @schoolclass = SchoolClass.new
   end
 
   def create
